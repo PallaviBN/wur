@@ -215,8 +215,8 @@ p{
   color: green
 }
 
-/* Leaderboard */
-.leaderboard-card {
+/* scoreboard */
+.scoreboard-card {
   padding: 15px;
   border: 2px solid red;
   margin-bottom: 15px;
@@ -226,22 +226,22 @@ p{
   margin-bottom: 25px;
 }
 
-.leaderboard-card .info p {
+.scoreboard-card .info p {
   padding-top: 15px;
 }
 
-.leaderboard-card .score {
+.scoreboard-card .score {
   border: 2px solid green;
   height: 100%;
 }
-.leaderboard-card .score h5{
+.scoreboard-card .score h5{
   font-size: 16px;
   color: #fff;
   background: green;
   padding: 8px 10px;
   border-bottom: 2px solid #f5f5f5;
 }
-.leaderboard-card .score p {
+.scoreboard-card .score p {
   text-align: center;
   font-size: 22px;
   font-weight: bold;

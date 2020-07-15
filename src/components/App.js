@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
 import '../index.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './Home'
@@ -8,11 +8,11 @@ import {connect} from 'react-redux'
 import NewPoll from './NewPoll'
 import QuestionPoll from './QuestionPoll'
 import LoadingBar from 'react-redux-loading'
-import Leaderboard from './Leaderboard'
+import Scoreboard from './Scoreboard'
 import Login from './Login'
 import PageNotFound from './PageNotFound'
 
-class App extends React.Component {
+class App extends Component {
   componentDidMount(){
     this.props.dispatch(handleInitialData())
   }
@@ -32,9 +32,9 @@ class App extends React.Component {
                     <div className='body'>
                       <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route path='/new' component={NewPoll} />
+                        <Route path='/newpoll' component={NewPoll} />
                         <Route path='/questions/:id' component={QuestionPoll} />
-                        <Route path='/leaderboard' component={Leaderboard} />
+                        <Route path='/scoreboard' component={Scoreboard} />
                         
                         <Route component={PageNotFound} />
                       </Switch>

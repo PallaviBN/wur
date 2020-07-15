@@ -24,12 +24,12 @@ class Nav extends React.Component {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/new' className='nav-link' activeClassName='active'>
+                            <NavLink to='/newpoll' className='nav-link' activeClassName='active'>
                                 New Poll
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/leaderboard' className='nav-link' activeClassName='active'>
+                            <NavLink to='/scoreboard' className='nav-link' activeClassName='active'>
                                Scoreboard
                             </NavLink>
                         </li>
