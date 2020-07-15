@@ -24,26 +24,24 @@ class Login extends React.Component {
         return (
             <div className='login-form'>
                 <div className='login-top'>
-                    <h4>Would You Rather ?</h4>
-                    <p>Sign In To Continue</p>
+                    <h1><b className='title'>Would You Rather... ?</b></h1>
                 </div>
                 <div className='login-body'>
-                    <ul>
-                        {users.map(user => (
-                            <li key={user.id}><img src={user.avatarURL}></img></li>
-                        ))}
-                    </ul>
-                    <h4>Sign In</h4>
+                <h4>Select To Continue</h4><hr></hr>
+                   
+                    
                     <form onSubmit={this.handleSubmit} onChange={this.handleChange}>
                         <select>
-                            <option className='default-option'>Select a Friend</option>
+                            <option className='default-option'>Click to choose</option>
                         
                             {users.map(user => (
                                 <option value={user.id} key={user.id}>
-                                    {user.name}
+                                   {/* <img src={user.avatarURL} alt='user avatar'></img> */}
+                                   {user.name}
                                 </option>
                             ))}
-                        </select>
+                        </select> 
+                    
                         <button type='submit' className='btn' disabled={this.disabled()}>Login</button>
                     </form>
                 </div>

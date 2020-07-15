@@ -17,13 +17,13 @@ class Question extends React.Component {
                 <div className='body container-fluid'>
                     <div className='row'>
                         <div className='col-md-4'>
-                            <div className='image'><img src={user.avatarURL} /></div>
+                            <div className='image'><img src={user.avatarURL} alt='avatar' /></div>
                         </div>
                         <div className='col-md-8'>
                             <div className='info'>
                                 <h5>Would you rather?</h5>
-                                <p>{optionOne.text}</p>
-                                <p>{optionTwo.text}</p>
+                                <p>-{optionOne.text}</p>
+                                <p>-{optionTwo.text}</p>
                                 {Object.keys(authedUser.answers).includes(id) 
                                     ? <Link className='btn results' to={{ 
                                         pathname:`/questions/${id}`,
@@ -46,7 +46,7 @@ class Question extends React.Component {
 function mapStateToProps({questions, users, authedUser}, {id}){
     const question = questions[id]
     return {
-        // what conditions should I put here?
+        
         question: question ? question : null,
         user: users[question.author] ? users[question.author] : null,
         authedUser: users[authedUser]

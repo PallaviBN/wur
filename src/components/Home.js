@@ -42,21 +42,25 @@ class Home extends React.Component {
     }
 }
 
-function mapStateToProps ({questions, users, authedUser}){
+function mapStateToProps (state, props){
+    console.log("\n state => ", state);
+    console.log("\n props => ", props);
+    const {questions, users, authedUser} = state;  
     let questionsAnswered = [];
     let questionsUnanswered = [];
-    if(questions && users && authedUser) {
-        let questionsId = Object.keys(questions);
-    
-        questionsAnswered = Object.keys(users[authedUser].answers)
-        questionsUnanswered = questionsId.filter(id => !questionsAnswered.includes(id))
-    }
-    return {
-        DataForUser: {
-            authedUser,
-            questionsAnswered,
-            questionsUnanswered
-        }
-    }
-}
+      if(questions && users && authedUser) {
+          let questionsId = Object.keys(questions);
+      
+          questionsAnswered = Object.keys(users[authedUser].answers)
+          questionsUnanswered = questionsId.filter(id => !questionsAnswered.includes(id))
+      }
+      return {
+          DataForUser: {
+              authedUser,
+              questionsAnswered,
+              questionsUnanswered
+          }
+      }
+  }
+
 export default connect(mapStateToProps)(Home);

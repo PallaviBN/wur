@@ -10,20 +10,21 @@ class Leaderboard extends Component {
                 {users.map((user) => (
                     <li key={user.id} className='leaderboard-card'>
                         <div className='row'>
-                            <div className='col-md-4'>
-                                <div className='image'><img src={user.avatarURL} alt='abc'/></div>
+                            <div className='col-md-5'>
+                                <div className='image'><img src={user.avatarURL} alt='avatar'/> 
+                                <h5><b>{user.name}</b></h5>
+                                </div>
                             </div>
-                            <div className='col-md-6'>
-                                <div className='info'>
-                                    <h5><b>{user.name}</b></h5>
-                                    <p><u>Questions Answered</u> :<span>{user.questionsAnswered}</span></p>
-                                    <p><u>Questions Created</u> :<span>{user.questionsCreated}</span></p>
+                            <div className='col-md-5'>
+                                <div className='info row'>
+                                    <p className='col-md-6'><u>Questions Answered</u> :<p><b>{user.questionsAnswered}</b></p></p>
+                                    <p className='col-md-6'><u>Questions Created</u> :<p><b>{user.questionsCreated}</b></p></p>
                                 </div> 
                             </div>
                             <div className='col-md-2'>
                                 <div className='score'>
                                     <h5>Score</h5>
-                                    <p>{user.total}</p>
+                                    <p><h3>{user.total}</h3></p>
                                 </div>
                             </div>
                         </div>

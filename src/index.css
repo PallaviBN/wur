@@ -218,7 +218,7 @@ p{
 /* Leaderboard */
 .leaderboard-card {
   padding: 15px;
-  border: 2px solid #f5f5f5;
+  border: 2px solid red;
   margin-bottom: 15px;
   position: relative;
   max-width: 600px;
@@ -226,22 +226,12 @@ p{
   margin-bottom: 25px;
 }
 
-.leaderboard-card .info p:first-of-type   {
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.leaderboard-card .info p > span {
-  margin-left: 30px;
-  background-color: green;
-  color: #fff;
-  padding: 8px 10px;
-  border-radius: 50%
+.leaderboard-card .info p {
+  padding-top: 15px;
 }
 
 .leaderboard-card .score {
-  border: 2px solid #f5f5f5;
+  border: 2px solid green;
   height: 100%;
 }
 .leaderboard-card .score h5{
@@ -261,11 +251,16 @@ p{
 
 /* Login */
 .login-form{
+  padding: 25px;
   width: 500px;
-  margin: 0 auto;
-  border: 2px solid #dee2e6;
+  margin: 75px auto;
+  border: 2px solid green;
   text-align: center;
 }
+.title{
+  color: green;
+}
+
 .login-top{
   background-color: #f5f5f5;
   border-bottom:2px solid #dee2e6;

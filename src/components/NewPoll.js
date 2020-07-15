@@ -32,17 +32,13 @@ class NewPoll extends React.Component {
                         <div className='form-container'>
                             <div className='form-top'><h2>Create New Poll</h2></div>
                             <div className='form-body'>
-                                <div className='form-intro'>
-                                    <p>Complete the question</p>
-                                    <p><b>Would you rather..</b></p>
-                                </div>
                                 <form onSubmit={this.handleSubmit}>
-                                    <input type='text' name='optionOne' value={optionOne} placeholder='Enter Option One..' onChange={this.handleChange} />
+                                    <input type='text' name='optionOne' value={optionOne} placeholder='Option One...' onChange={this.handleChange} />
                                     <div className='divider'>
                                     <span>OR</span>
                                         <hr></hr>
                                     </div>
-                                    <input type='text' name='optionTwo' value={optionTwo} placeholder='Enter Option Two..' onChange={this.handleChange} />
+                                    <input type='text' name='optionTwo' value={optionTwo} placeholder='Option Two...' onChange={this.handleChange} />
                                     <button type='submit' className='btn btn-submit' disabled={this.disabled()}>Submit</button>
                                 </form>
                             </div>
